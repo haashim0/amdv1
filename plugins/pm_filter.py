@@ -708,7 +708,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b> 📕 𝗬ᴏᴜʀ 𝗥ᴇϙᴜᴇsᴛᴇᴅ 𝗠ᴏᴠɪᴇ :</b> <code>{search}</code> \n\nThis Message Will be Deleted in 10 Mins So Forward To Saved Message or Forward To Your Friends \n\n<b>♻️ Ꮲᴏᴡᴇʀᴇᴅ Ᏼʏ ♻️</b> @AMD_LinkZz"
+        cap = f"<b> 📕 𝗬ᴏᴜʀ 𝗥ᴇϙᴜᴇsᴛᴇᴅ 𝗠ᴏᴠɪᴇ :</b><code>{search}</code> \n\nThis Message Will be Deleted in 10 Mins So Forward To Saved Message or Forward To Your Friends \n\n<b>♻️ Ꮲᴏᴡᴇʀᴇᴅ Ᏼʏ ♻️</b> @AMD_LinkZz"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
