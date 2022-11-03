@@ -641,7 +641,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]-💠-{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -708,7 +708,8 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<code>{file.file_name}</code> <br> \n \n♻️Ꮲᴏᴡᴇʀᴇᴅ Ᏼʏ♻️ @AMD_LinkZz"
+        cap = f"<b> 📕 𝗬ᴏᴜʀ 𝗥ᴇϙᴜᴇsᴛᴇᴅ 𝗠ᴏᴠɪᴇ :</b> {search} \n\n 
+This Message Will be Deleted in 10 Mins So Forward To Saved Message or Forward To Your Friends \n\n<b>♻️ Ꮲᴏᴡᴇʀᴇᴅ Ᏼʏ ♻️</b> @AMD_LinkZz"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
